@@ -1,0 +1,37 @@
+[
+  {
+    "input": "sunset over the ocean",
+    "v1": "A breathtaking image of a crystal-clear, azure sky over the Pacific Ocean, with a mesmerizing array of sunrises and sunsets. The vast expanse of the ocean stretches from the horizon, creating a dramatic backdrop against a golden hour of morning. Flares of natural sunlight bathe the scene in a golden glow, creating a sense of serenity and serenity in the face of the impending day. telephoto lens, golden hour, polarizing filter",
+    "v2": "A dramatic sunset over the Pacific Ocean at 3:45 PM, the sun at the exact zenith of the sky, its light a brilliant orange-white that illuminates the ocean surface and the trees on the left side of the frame in a perfect warm reflection. The sky above is a deep amber to violet, the horizon a pale rose. The ocean is reflected in the dark water below. Shot from a small boat, wide angle, the horizon line perfectly centered. The image is about the beauty of light, water, and the sky in its full chromatic expression.",
+    "v1_words": 71,
+    "v2_words": 96
+  },
+  {
+    "input": "cherry blossoms in rain",
+    "v1": "A tranquil image of cherry blossoms floating in the background of a serene, rain-soaked cityscape. In the foreground, buildings and buildings' shadows create a sense of depth and intensity, while the dense, sprawling cityscape below offers a serene, dreamy backdrop. The vibrant, hues of the blossoms create a dreamy, slightly arabesque atmosphere, accentuating the sense of unity and tranquility of the city. shallow depth of field, f/2.8 aperture, soft lighting",
+    "v2": "Cherry blossom trees in bloom, petals falling in a shower of rain, the petals streaming down the branches like snow. The light is the pale, diffused light of a clear afternoon rain. The trees are lit from below, their branches glowing pink-white against the grey sky. The petals are falling at this speed \u2014 a blur of pink against the grey. The rain falls from the sky above, visible as a moving line of water. The mood is brief, luminous, and seasonal. The color is pink-white, grey, and the rain. The image is a perfect visual metaphor for the beauty of transience.",
+    "v1_words": 70,
+    "v2_words": 102
+  },
+  {
+    "input": "wolf howling at the moon",
+    "v1": "A mesmerizing image of a majestic wolf howling at the moon, casting a soft glow on the night sky and creating a sense of mystery and power. The creature's fur is a mix of black and white, creating a dreamy, otherworldly quality. The moon's rays cast a soft glow on the scene, contrasting with the haunting atmosphere of the forest. wide aperture, f/4 aperture, low-light photography",
+    "v2": "A lone grey wolf stands on a snow-covered ridge, head tilted back, howling \u2014 the sound a circle of moonlight around its body. The moon is visible behind it, sharp and silver, its reflection distorted in the snow. The snow is white and still. The sky is the pale blue of a moonlit night. Mood: primal, ancient, the wolf as the most direct human animal, howling at the universe.",
+    "v1_words": 66,
+    "v2_words": 69
+  },
+  {
+    "input": "neon-lit street at night",
+    "v1": "A captivating image of a neon-lit street illuminated by street lamps, each displaying a unique array of colors and textures. The street is adorned with colorful banners and signs, inviting pedestrians to explore the bustling environment. The background is filled with vibrant streetlights, adding a surreal touch to the scene. A narrow aperture is used to capture the intricate pattern of the street lights, while the soft focus lens isolates the scene from the bustling city. wide aperture, wide-angle lens, warm tones",
+    "v2": "A narrow street in a dense city at night, the midday sun gone and replaced by a sea of coloured light: deep magenta, electric blue, and white neon signs creating a vivid coloured field that extends far beyond the camera's immediate frame. The street is empty except for a single passing car, its interior lights illuminating a small yellow rectangle. Shot from a low angle, looking straight down, the coloured field fills the entire frame, the empty street beyond it. The image is about colour, light, and the city's evening transformation.",
+    "v1_words": 82,
+    "v2_words": 91
+  },
+  {
+    "input": "rainy tokyo street",
+    "v1": "An enchanting image of a bustling tokyo street, with pedestrians crossing busy intersections and engaging in lively conversation with the vibrant colors and lively patterns of the city. A vivid blues, purples, and oranges contrast beautifully with the soft, detailed surfaces of the buildings, highlighting the vibrant character of this vibrant metropolis. In the background, a wide-angle lens captures the entire scene, emphasizing the intricacy of the architectural design and the vivid colors. wide aperture, telephoto lens, high contrast",
+    "v2": "A narrow Tokyo street at 5pm, rain on every surface \u2014 the wet pavement, the wet windows of shops, the wet street lights. A single figure walks away from camera, a black cat in the doorway. The street is empty except for a few passing figures and the occasional pedestrian. The rain is the subject \u2014 the specific, constant, merciless rain of a city that has been there since the Meiji era. The light is grey-white and wet. The image is about the city as it exists in rain, its daily existence made visible.",
+    "v1_words": 79,
+    "v2_words": 94
+  }
+]

@@ -389,3 +389,16 @@ When we generated images from all three prompt versions (basic input, v1 output,
 The gap between "sunset over the ocean" and a 150-word detailed expansion has narrowed dramatically since 2023. Prompt expansion still matters for specific creative vision, technical control, and avoiding hallucinations (v1 turned wolf into deer — the image correctly showed a deer). But for "I just want a good sunset photo," four words might genuinely be enough in 2026.
 
 **The value is shifting from "make the image better" to "make the image yours."** Default AI images are polished but generic. Detailed prompts express specific creative intent the generator can't guess.
+
+### 9. We accidentally trained a reasoning model for a generation task
+
+Qwen3-0.6B is a thinking/reasoning model with built-in `<think>` tags. We used it for pure text generation (prompt expansion) without disabling thinking mode. This means:
+
+- The model may spend tokens on internal reasoning instead of prompt output
+- The eval loss (2.67) partly measures thinking quality, not just prompt quality
+- Some output capacity was "wasted" on reasoning overhead
+- The chat template format (`<|im_start|>`) triggered reasoning behavior we didn't need
+
+**Impact:** The model still produces good prompt expansions, but it's suboptimal. A non-reasoning model like Qwen2.5-0.5B (similar size, no thinking overhead) might perform better for this specific task. The v2 results represent a lower bound — the architecture/data quality improvement is real but potentially even larger without the reasoning tax.
+
+**Lesson:** Match your base model to your task. Reasoning models are great for math/logic/coding. For pure text generation tasks, use a non-reasoning base model.
