@@ -295,3 +295,34 @@ v2: 27% more words, names specific locations/cameras/lighting, correct scene und
 v1: 1.9x faster, no chat template artifacts, simpler to deploy.
 
 For production use, v2 is clearly better. For understanding what drives quality, the answer is: architecture + data quality > parameter count.
+
+## Experiment 2: Pretrained vs From Scratch
+
+### Hypothesis
+
+How much of v2's quality comes from pretrained weights vs the architecture itself? We train the exact same Qwen3-0.6B architecture on the exact same data with the exact same hyperparameters — but starting from random weights instead of pretrained ones.
+
+### Setup
+
+| | Pretrained (Run 1) | From Scratch (Run 2) |
+|---|-------------------|---------------------|
+| Architecture | Qwen3-0.6B | Qwen3-0.6B |
+| Parameters | 596,049,920 | 596,049,920 |
+| Weights init | Pretrained | Random |
+| Training data | 9,400 Claude pairs | 9,400 Claude pairs |
+| Learning rate | 2e-5 | 2e-5 |
+| Batch size | 1 (accum 32) | 1 (accum 32) |
+| Epochs | 4 | 4 |
+| Precision | float32 | float32 |
+| Grad checkpointing | Yes | Yes |
+
+**W&B comparison:** Both runs visible at https://wandb.ai/actual-ritesh-org/prompt-fungineer-v2
+
+### Training Log
+
+- From-scratch run started at ~5:32am
+- Step speed: ~10.5s/step (vs 9.4s for pretrained — random weights have larger gradients)
+- ETA: ~3h 15m
+- W&B run: https://wandb.ai/actual-ritesh-org/prompt-fungineer-v2/runs/efdwm6gg
+
+*(Will update with final metrics, loss comparison, and output examples when training completes)*

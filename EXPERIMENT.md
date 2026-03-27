@@ -21,6 +21,31 @@ A full fine-tune of **Qwen3-0.6B** (600M params, 2025 architecture) on 9,400 hig
 2. **Better pretraining** (multilingual, code, reasoning vs English web text)
 3. **Better training data** (9,400 Claude-generated pairs vs web-scraped prompts)
 
+## Experiment 2: Pretrained vs From-Scratch (Ablation)
+
+To isolate the contribution of pretraining, we run a second experiment: **same Qwen3-0.6B architecture, same training data, same hyperparameters — but with randomly initialized weights instead of pretrained weights.**
+
+This answers: how much of v2's improvement comes from the pretrained knowledge (language understanding, world knowledge, reasoning patterns) vs the architecture alone (GQA, RoPE, modern tokenizer)?
+
+**Variables:**
+
+| | Pretrained | From Scratch |
+|---|-----------|-------------|
+| Architecture | Qwen3-0.6B | Qwen3-0.6B |
+| Parameters | 596M | 596M |
+| Initial weights | Pretrained on trillions of tokens | Random (Xavier/Kaiming init) |
+| Training data | 9,400 Claude pairs | 9,400 Claude pairs |
+| Hyperparams | Identical | Identical |
+| Hardware | M4 Pro MPS | M4 Pro MPS |
+
+**Prediction:** The from-scratch model will learn basic prompt expansion patterns (longer outputs, some photography vocabulary) but will lack coherence, specificity, and world knowledge. We expect:
+- Higher final loss (both train and eval)
+- Generic, less specific outputs
+- More hallucinations and nonsensical combinations
+- Possibly worse than GPT-2 355M (v1) since GPT-2 was also pretrained
+
+---
+
 Specifically, we predict:
 1. **More creative and varied expansions** than the GPT-2 355M original
 2. **Better prompts that produce better images** when fed to modern image generators
