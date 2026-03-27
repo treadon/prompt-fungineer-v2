@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+checkpoints/
+wandb/
+data/batch_*.jsonl
+data/all_pairs.jsonl
+*.pt
+.DS_Store
