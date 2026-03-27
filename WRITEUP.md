@@ -381,3 +381,11 @@ Step 1120: ~1.5 (final — eval loss 2.67)
 **The architecture alone isn't enough.** Qwen3's modern architecture (GQA, RoPE, 151K vocab) provides the *capacity* to learn, but without pretrained weights it's just empty capacity. The architecture determines the ceiling; the pretraining determines the floor.
 
 **Practical implication:** If you're building a specialized model, **always start from a pretrained base.** The pretraining gives you language understanding "for free" — your fine-tuning data only needs to teach the specific task, not the entire language. This is why 9,400 samples worked brilliantly for the pretrained model but failed for the scratch model.
+
+### 8. The plot twist: image generators have gotten smart enough to not need this
+
+When we generated images from all three prompt versions (basic input, v1 output, v2 output) using Grok Imagine, the basic one-liners often produced images just as good as the expanded prompts. Modern image generators internally enhance prompts before generating — they add lighting, composition, and style automatically.
+
+The gap between "sunset over the ocean" and a 150-word detailed expansion has narrowed dramatically since 2023. Prompt expansion still matters for specific creative vision, technical control, and avoiding hallucinations (v1 turned wolf into deer — the image correctly showed a deer). But for "I just want a good sunset photo," four words might genuinely be enough in 2026.
+
+**The value is shifting from "make the image better" to "make the image yours."** Default AI images are polished but generic. Detailed prompts express specific creative intent the generator can't guess.
