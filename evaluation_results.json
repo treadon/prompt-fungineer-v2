@@ -1,0 +1,192 @@
+{
+  "v1_model": "treadon/prompt-fungineer-355M",
+  "v2_model": "checkpoints/prompt-fungineer-v2/best",
+  "v1_params": 354823168,
+  "v2_params": 596049920,
+  "v1_avg_time": 2.559319496154785,
+  "v2_avg_time": 4.824808835983276,
+  "v1_avg_words": 92.45,
+  "v2_avg_words": 116.95,
+  "results": [
+    {
+      "input": "a cat on a mountain",
+      "v1_output": "BRF: a cat on a mountain POS: A captivating image of a friendly, healthy cat climbing a mountain. The cat's body is slightly disfigured, but its fur is still soft and plump, and its eyes are sparkling with happiness. The sunlight filters through the clouds and filters through the cat's fur, casting dappled light and enhancing the sense of motion. The landscape below is filled with fluffy, rustic trees, and a verdant, picturesque valley stretches out in front of the cat. ENH: macro lens, warm lighting, shallow depth of field INS: by Erik Johansson by Tim Walker NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: a cat on a mountain\nassistant\nA domestic cat lying on a granite mountain ledge, perfectly centered, looking directly into the camera at a slight angle. The mountain backdrop is dramatic \u2014 snow-capped peaks, a river valley, a high alpine meadow. The cat is in soft diffused light, the mountain shadows barely visible beneath it. Shot at f/4, 85mm, ISO 200. The cat's gaze is direct and patient. The image is about domestic life at its most domestic \u2014 a small animal at the center of a vast landscape.",
+      "v1_time": 4.5745689868927,
+      "v2_time": 4.403252124786377,
+      "v1_words": 106,
+      "v2_words": 98
+    },
+    {
+      "input": "sunset over the ocean",
+      "v1_output": "BRF: sunset over the ocean POS: A breathtaking image of a tranquil, calm image of the horizon at sunset, revealing a serene, crystal-clear ocean with a tranquil white sand beach below. The sun's rays cast a soft glow on the sea, casting a warm, golden light across the landscape. In the distance, a dramatic, dramatic sunrise illuminates the horizon, casting a vivid light on the scene and emphasizing the serenity of the ocean. ENH: wide-angle lens, golden hour, twilight INS: by David Alan Harvey by Kirsty Mitchell NEG: blurry, low quality, low resolution, poorly drawn, amateur photography",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: sunset over the ocean\nassistant\nThe Pacific Ocean at sunset, the sea surface in perfect mirror \u2014 the sky above reflected in the dark water below, the sky and its reflection creating a continuous white and gold spectacle from horizon to zenith. The water is perfectly still. The sky is the sky \u2014 the colors from deep rose at the horizon through rose to blue to the upper clouds. The ocean surface reflects the sky above. The image is the sky reflected in the ocean, the reflection so perfect it becomes the subject. The reflection is so perfect it is also a distortion \u2014 the reflection of the reflection. The image is the sky reflected in the water, the water in the sky, the sky in the water. The image is the sky reflected in the ocean, the ocean in the sky, the sky in the ocean \u2014 the same colors and light in the same geometry.",
+      "v1_time": 2.5553171634674072,
+      "v2_time": 6.429413080215454,
+      "v1_words": 97,
+      "v2_words": 166
+    },
+    {
+      "input": "abandoned spaceship",
+      "v1_output": "BRF: abandoned spaceship POS: A haunting image of a deserted, abandoned spaceship, with debris and debris from the ship still hanging from the ceiling. The background features a desolate, desolate landscape, with crumbled metal and debris littering the desolate landscape. The sun casts warm, dappled light through the smoke and dust, emphasizing the desolate, decaying appearance of the setting sun. ENH: standard lens, high ISO, shallow depth of field INS: by Kirsty Mitchell by Peter Lik NEG: blurry, low quality, low resolution, bad proportions, extra limbs",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: abandoned spaceship\nassistant\nA vast derelict starship, its hull entirely consumed by stellar winds and cosmic dust, the exterior of the ship visible through the deep space between stars \u2014 the hull's surface is a mosaic of broken sections, each one a different color from the interior, a starburst at the ship's center. The ship's interior is visible through the gap between stars: a city of orange and gold, people and machines still standing, their forms compressed and distorted by the wind. The stars above are enormous and cold. The mood is the loss of purpose \u2014 a vessel that was designed to be useful and then has become the thing it was designed to be useful against.",
+      "v1_time": 2.199489116668701,
+      "v2_time": 5.101909875869751,
+      "v1_words": 86,
+      "v2_words": 127
+    },
+    {
+      "input": "old man playing chess",
+      "v1_output": "BRF: old man playing chess POS: A whimsical image of an elderly man playing chess, immersed in the game's intricately detailed movements. The elderly man wears a colorful suit, a crystal ball perched on his shoulder, and a charming smile. The chessboard is adorned with intricate pieces and moves, and the background features a variety of colorful flowers and a whimsical chessboard backdrop. ENH: standard lens, natural light, fast shutter speed INS: by Thomas Ligotti by Elizabeth Stiles NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: old man playing chess\nassistant\nA veteran chess grandmaster sits at a mahjong table, the game's rules visible in the slow, deliberate patterns of his eyes and hands. His face is a map of decades of wins and losses. The chess pieces are stacked at the table's edge, the pieces arranged in the optimal position. The chessboard is the only surface. Shot from the side, the chessboard as the composition, the grandmaster's face and the pieces filling the frame. The image is about the persistence of strategy and the cost of knowledge. The old man who knows all the moves, the chess that knows all the positions. The game is over. The moves are the question.",
+      "v1_time": 2.2479100227355957,
+      "v2_time": 5.167894124984741,
+      "v1_words": 87,
+      "v2_words": 125
+    },
+    {
+      "input": "cherry blossoms in rain",
+      "v1_output": "BRF: cherry blossoms in rain POS: A whimsical image of a cherry blossom blossoms in a lush, tropical rainforest, with a lush, green canopy surrounding them. The warm, golden colors of the blossoms contrast with the dappled light filtering through the dense undergrowth, creating a captivating, whimsical scene. The sun casts a warm glow on the scene, creating a dreamy atmosphere. ENH: wide aperture, medium depth of field, polarizing filter INS: by Annie Leibovitz by David Alan Harvey NEG: blurry, low quality, low resolution, fused fingers, fused lips",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: cherry blossoms in rain\nassistant\nA cherry blossom tree in full bloom photographed at the moment of rain, the petals floating and falling in the downpour. Fuji X-T5, 24mm f/4 ultra-wide lens, f/8, ISO 800, 1/1000s. The petals are translucent pink and white, each one catching the raindrop light differently. The rain falls in the background as a soft white blur. Color: vivid pink blossom against white rain, the sky behind in soft grey. Matte finish. The delicate pink against the wet grey sky. Japanese seasonal beauty.",
+      "v1_time": 2.421638250350952,
+      "v2_time": 4.638147830963135,
+      "v1_words": 88,
+      "v2_words": 96
+    },
+    {
+      "input": "underwater city",
+      "v1_output": "BRF: underwater city POS: A vibrant underwater city, teeming with life forms from the deep. The city is adorned with colorful, vibrant coral, with colorful coral clusters and other marine life thriving within. Each structure is intricately designed, with intricate planks, architectural details, and intricate, coral-inspired architecture. The vibrant colors and textures of the coral create a striking blend of contrast and harmony, emphasizing the unity of the ocean and the human realm. ENH: wide-angle lens, high contrast, underwater housing INS: by Kirsty Mitchell by David LaChapelle NEG: blurry, low quality, low resolution, fused fingers",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: underwater city\nassistant\nA city of glass and coral on the ocean floor, the buildings rising from the seafloor in a grid of coral-encrusted columns and coral-encrusted glassy roofs. The sky above is the deep blue of the ocean surface above, visible through the water. Schools of fish navigate between the buildings. The city is alive and breathing, the glass surfaces reflecting the sky above in distorted and beautiful ways. Mood: the ocean as the most densely populated place on Earth, the city of water as the most beautiful possible place.",
+      "v1_time": 2.5650360584259033,
+      "v2_time": 4.161381721496582,
+      "v1_words": 95,
+      "v2_words": 100
+    },
+    {
+      "input": "wolf howling at the moon",
+      "v1_output": "BRF: wolf howling at the moon POS: A haunting image of a deer stalking the night sky, its eyes wide with fear and determination. In the distance, a starry night sky punctuates the silhouette, with the moon in the background casting a dappled glow on the scene. The deer's ears are raised, its body tense and ready for the coming storm. The moon's brilliant glow illuminates the creature and the surrounding environment, emphasizing the ethereal quality of the scene. ENH: wide aperture, polarizing filter, soft focus INS: by Annie Leibovitz by Elliott Erwitt NEG: blurry, low quality, low resolution, bad anatomy, extra limbs",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: wolf howling at the moon\nassistant\nA grey wolf stands in the moonlight, its amber eyes locked on the full moon. The moon is a perfect silver disc above the horizon. The wolf's fur catches the light in its own warm amber. The moon is the only element besides the wolf and the moonlight \u2014 the image is entirely about the moon and the animal that sees it. The moonlight is the only light source. The wolf's amber eyes and the moon's silver disc are the only things in the frame. The moon that is watching and the animal that is watching the moon. The moon that is always there. The wolf that is there for the moon.",
+      "v1_time": 2.702670097351074,
+      "v2_time": 5.058599948883057,
+      "v1_words": 103,
+      "v2_words": 127
+    },
+    {
+      "input": "neon-lit street at night",
+      "v1_output": "BRF: neon-lit street at night POS: A captivating image of a bustling, neon-lit street at night, with pedestrians weaving through the mix of pedestrians and vehicles. The vibrant colors and patterns of the cityscape contrast with the slightly dreary setting, giving the scene a striking mix of atmosphere and beauty. The scene is filled with people, vehicles, and shadows, emphasizing the fluidity and quality of the lighting. ENH: wide aperture, low light photography, vibrant colors INS: by Jimmy Nelson by Michael Kenna NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: neon-lit street at night\nassistant\nA city street at 2am, every surface lit by a different coloured neon sign \u2014 red traffic lights, blue bus stop signs, green bus number boards, yellow taxi stop boards. The light creates a kaleidoscopic mosaic of colour and form. People in coats and umbrellas move through the light maze, their figures tiny. The street is empty except for the cars, which are moving. Shot from the street level looking across the light mosaic. The city's private calendar, expressed as colour.",
+      "v1_time": 2.3611879348754883,
+      "v2_time": 3.9433069229125977,
+      "v1_words": 91,
+      "v2_words": 95
+    },
+    {
+      "input": "ancient temple in jungle",
+      "v1_output": "BRF: ancient temple in jungle POS: An enchanting image depicting a serene, ancient temple nestled among the lush foliage of an ancient jungle temple. The massive pillars and polished stone forms are silhouetted against a vast, lush, rainforest floor. The warm, golden light from the setting sun illuminates the temple's intricate carved stone and vibrant, flowing foliage, enhancing the serenity of the scene. ENH: macro lens, soft light, golden hour INS: by Lois Greenfield by Rodney Loh NEG: blurry, low quality, low resolution, poorly drawn, amateur photography",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: ancient temple in jungle\nassistant\nAn elaborate stone temple rises from the dense tropical jungle, its columns and arches carved with stylized mythological figures. The jungle canopy is thick and green, filtering the light into shifting pools of amber and gold. The temple's architecture is impossibly perfect despite the jungle surrounding it. Shot from a low angle looking up, the temple's scale is almost overwhelming. The jungle's overwhelming green and the temple's architectural perfection in a single frame. The human desire to build on the land and to make space for itself. The ancient stone temple as the first architecture in the jungle.",
+      "v1_time": 2.333427906036377,
+      "v2_time": 4.472891807556152,
+      "v1_words": 87,
+      "v2_words": 112
+    },
+    {
+      "input": "astronaut on Mars",
+      "v1_output": "BRF: astronaut on Mars POS: A dynamic image of an astronaut on Mars, determined to ascend the Red Planet's seemingly infinite surface. The astronaut, wearing protective gear, a helmet, and gloves, is focused on an advanced, vertical landing gear. The Martian landscape stretches across the horizon, illuminated by a narrow, focused sunlight. The surrounding landscape is soft, natural, and hilly, emphasizing the challenging conditions of the landing. The wide aperture of a wide-angle lens and high contrast create a vivid, lifelike image. ENH: wide aperture, f/5.6, telephoto lens, large aperture INS: by Tim Walker by Danny Lyon NEG: blurry, low quality, low resolution, poorly drawn, amateur photography",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: astronaut on Mars\nassistant\nA lone astronaut on a solar station on the Martian surface, Earth visible in the deep blue sky behind \u2014 the Earth's shadow on the Martian surface. The Mars surface is flat and pale, with small craters. The astronaut is small in the frame, their figure against the grey and rust landscape. The light is the flat, even light of a Martian day. The mood is solitary, purposeful, and quietly Earthly \u2014 the vast alien world as the last place the human body can be before it is taken.",
+      "v1_time": 2.9218928813934326,
+      "v2_time": 4.0594470500946045,
+      "v1_words": 107,
+      "v2_words": 102
+    },
+    {
+      "input": "lonely lighthouse",
+      "v1_output": "BRF: lonely lighthouse POS: A serene, serene image of a lighthouse placed amidst the clouds, reflecting the serene beauty and tranquility of the area. The lighthouse's crystal-clear, golden light casts a calming glow over the scene, creating a serene, peaceful atmosphere. The lighthouse's domed tower, suspended gracefully above the serene horizon, is the only visible feature of the natural landscape. ENH: wide-angle lens, low light, high contrast INS: by Chris Burkard by Paul Gauguin NEG: blurry, low quality, low resolution, bad proportions, extra limbs",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: lonely lighthouse\nassistant\nA lighthouse tower in a quiet coastal village, photographed from a distance where the tower is a solid white tower against a grey morning sky. The lighthouse beam sweeps across the sea, its white light catching the morning fog and turning it into a white halo. The village is visible beyond the beam \u2014 a cluster of buildings, a small dock, a family of boats. The sea is grey and calm. The lighthouse is the only light in the grey morning, casting a long white shadow across the grey sea and grey sky. Shot from the village dock, looking out across the lighthouse beam. The mood is solitude \u2014 the lighthouse as a symbol of watch, the village as the place where the watch is performed, the sea as the place where the watch is held.",
+      "v1_time": 2.408174991607666,
+      "v2_time": 6.01214075088501,
+      "v1_words": 84,
+      "v2_words": 148
+    },
+    {
+      "input": "jazz musician",
+      "v1_output": "BRF: jazz musician POS: A mesmerizing image of a jazz musician skillfully performing on stage, their delicate instrument in hand. Their warm, charismatic voice draws the viewer into the performance, capturing their powerful energy and rhythm. The stage lights cast dramatic shadows on the musician, emphasizing their presence and their music. A narrow aperture isolates the image, emphasizing the musician's expressive gestures and expressive face. ENH: wide aperture, fast shutter speed, soft lighting INS: by David LaChapelle by Elliott Erwitt NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: jazz musician\nassistant\nA jazz trumpeter at a small intimate club, late afternoon, the light from a large front window casting a dramatic shadow on the floor. His face is focused, his eyes on the music, the fingers poised on a note. The club is small, the audience a blurred mass of faces and tones. The light is warm and direct. Mood: the music that is made by people who are not interested in the music, who are interested in the music and are doing it, the private performance of the private subject.",
+      "v1_time": 2.335772752761841,
+      "v2_time": 4.020943880081177,
+      "v1_words": 89,
+      "v2_words": 102
+    },
+    {
+      "input": "frozen waterfall",
+      "v1_output": "BRF: frozen waterfall POS: An enchanting image of a majestic waterfall cascading from a cliff. The cascading water creates a mesmerizing pattern of shimmering ice crystals, creating a dreamy atmosphere of harmony and magic. The crystal-clear water reflects the warm, golden sunlight, casting dappled light into the canyon below. ENH: wide aperture, low light, tripod INS: by Annie Leibovitz by Mario Testino NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: frozen waterfall\nassistant\nA waterfall frozen at its peak, the water solid and translucent in the cold air, the waterfall walls visible through the ice. The ice surface is a gradient of translucent blue through the white core. The surrounding rock is dark grey. Shot from a low angle at the base of the ice, looking up, the ice ceiling and the waterfall walls visible. The waterfall is frozen in its full force \u2014 not yet a plunge pool, not yet a rushing river, just a solid mass of water in its peak. The water is not falling. It is present. The silence of the frozen water is the silence of the moment.",
+      "v1_time": 2.012526035308838,
+      "v2_time": 4.839109182357788,
+      "v1_words": 71,
+      "v2_words": 122
+    },
+    {
+      "input": "child flying a kite",
+      "v1_output": "BRF: child flying a kite POS: A whimsical image of a child playing with a kite in a whimsical forest. The child, wearing a colorful, flowing kite outfit, is surrounded by a vibrant, otherworldly forest filled with vivid colors, mushrooms, and otherworldly plants. The kite is suspended in mid-air, with the wind in the background, creating a magical, otherworldly atmosphere. The shallow depth of field creates a mesmerizing depth of field, while the soft focus image is beautifully blurred and sharp. ENH: wide aperture, f/5.6 aperture, medium aperture, high dynamic range INS: by Paul Laverty by Max Schildbach NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: child flying a kite\nassistant\nA small child, perhaps five years old, sits on a park bench, looking up at a large cotton kite, the kite's tail a long white line leading from the child's face to the kite's edge. The child's face is turned up to the kite, looking down, the kite's shadow on the grass below. The child's eyes are closed, the expression of pure delight. The kite is already in flight, the child's hand already at the string. Shot from slightly to the side, the child and kite at the top of the frame. The light is the warm, diffuse light of a summer afternoon. The image is about the specific pleasure of a small human being at the exact moment when the world's most beautiful thing is just beginning to rise.",
+      "v1_time": 2.9955921173095703,
+      "v2_time": 5.961172103881836,
+      "v1_words": 107,
+      "v2_words": 144
+    },
+    {
+      "input": "steampunk clock tower",
+      "v1_output": "BRF: steampunk clock tower POS: An imaginative and dynamic scene depicting a steampunk clock tower, with its intricate gears and ornate clock faces. The tower's ornate design is captured in vibrant, neon colors, casting a mesmerizing, otherworldly glow. Light from the street below filters through the tower's windows, creating a dreamy, otherworldly atmosphere. ENH: telephoto lens, large aperture, soft lighting INS: by Ansel Adams by Ansel Adams NEG: blurry, low quality, low resolution, poorly drawn, amateur photography",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: steampunk clock tower\nassistant\nA Victorian-era clock tower in a derelict city, the tower's brass fittings gleaming with some recent salvage. The tower's interior is flooded with condensation, its brass fittings rusted to the point of distortion. The clock above is still running, but its face shows a date that no one is looking at. The tower's exterior is a derelict structure, its windows cracked and the street outside barely visible through the broken windows. The clock face is lit by a single bulb that creates a circle of amber light around it. The city beyond is a blur of smoke and rain. The image is a collision of technology and decay.",
+      "v1_time": 2.1307806968688965,
+      "v2_time": 5.005584239959717,
+      "v1_words": 77,
+      "v2_words": 121
+    },
+    {
+      "input": "rainy tokyo street",
+      "v1_output": "BRF: rainy tokyo street POS: A vibrant and dramatic image of a bustling tokyo street, showcasing the vibrant colors, textures, and design that are taken from across the city. A diverse group of pedestrians walk in harmony, sharing the street with a dynamic variety of vehicles and pedestrians. The surrounding buildings add a striking architectural texture, and the moon casts a warm, golden glow on the scene. ENH: wide-angle lens, golden hour lighting, f/1.8 aperture INS: by Yoshitaka Amano by Michiko NEG: blurry, low quality, low resolution, poorly drawn, amateur photography",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: rainy tokyo street\nassistant\nA narrow alley in Shibuya during the rain, the grey asphalt reflecting the distorted white shapes of the street lamps above. Raindrops on the pavement are frozen mid-strike, each one a tiny sphere. The alley is deserted except for a figure in a grey coat and a single dog \u2014 the dog's ear is caught in the air. The wet stone walls are slick, the light from above creating a soft diffused glow. Mood: the specific, intimate, pedestrian-heavy pleasure of rain in a city that is designed for speed.",
+      "v1_time": 2.43858003616333,
+      "v2_time": 4.149087905883789,
+      "v1_words": 91,
+      "v2_words": 102
+    },
+    {
+      "input": "desert oasis",
+      "v1_output": "BRF: desert oasis POS: A tranquil image of a lush oasis surrounded by rolling sand dunes that surround a quaint, sprawling oasis village nestled among the rocks. In the distance, a clear blue sky and the gentle sway of the oasis wind provide a serene backdrop to this breathtaking scene. The setting sun casts a warm, golden light over the scene, creating a magical atmosphere and enhancing the dreamlike quality of the image. ENH: telephoto lens, high contrast, f/2.8 aperture INS: by Thomas Pesquet by Daniela Pararco NEG: blurry, low quality, low resolution, bad proportions, extra limbs",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: desert oasis\nassistant\nA desert oasis in the Arabian Gulf, the underground canal system visible as a blue-green ribbon running through the desert. A small community of Arab families lives in the center of the canal, their mud-brick buildings visible at the water's edge. The surrounding desert is in the early season \u2014 yellow and red, wind-lashed, the sky a pale blue with a few grey clouds. A camel rides the canal's central course, its white coat reflected in the water. The image captures the paradox of a desert that has always existed in this exact configuration \u2014 the water and the dry, the oasis and the desert, existing together in a landscape that has been inhabited by the same people for a thousand years.",
+      "v1_time": 2.5810277462005615,
+      "v2_time": 5.471090316772461,
+      "v1_words": 97,
+      "v2_words": 134
+    },
+    {
+      "input": "grandmother baking bread",
+      "v1_output": "BRF: grandmother baking bread POS: A warm, enchanting image of a grandmother setting aside a bowl of bread to bake, leaving a trail of pink and orange bread crumbs on the cob. The grandmother's dress is serene, and the wooden planks of the kitchen reflect the warm, golden light from the stove. The warm, golden glow of the setting sun casts a comforting, natural light on the scene. ENH: standard lens, soft lighting, shallow depth of field INS: by Kirsty Mitchell by Kirsty Mitchell NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: grandmother baking bread\nassistant\nA grandmother in her 80s holds a large wooden mixing board covered in a sheet of sourdough, steam rising from the mixture. Her hands are flour-dusted and floury. The bread is already beginning to rise, the bubbles caught in the flour stream. She wears a dark cotton coat and a straw hat. The kitchen behind her is warm and unglamorous \u2014 a single overhead light. Shot from slightly above and to the side, the bread filling the lower half of the frame, the grandmother against the light. The steam is the subject. The light is the subject. The image is about the particular warmth of a living thing's hands holding something that is not yet ready.",
+      "v1_time": 2.3832600116729736,
+      "v2_time": 5.487267017364502,
+      "v1_words": 93,
+      "v2_words": 129
+    },
+    {
+      "input": "northern lights",
+      "v1_output": "BRF: northern lights POS: A mesmerizing image of the northern lights illuminating the night sky from a serene mountain range. The moon rises in the background, casting dramatic shadows on the valley floor and illuminating the rugged peaks below. The scene is bathed in a soft, warm hues of violet, orange, and red, creating a dreamy, otherworldly atmosphere. The sky above is an oasis of color, with a myriad of stars appearing to dance, seemingly on a cosmic path. ENH: standard lens, slow shutter speed, wide aperture INS: by Annie Leibovitz by Brandon Woelfel NEG: blurry, low quality, low resolution, bad anatomy, extra limbs",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: northern lights\nassistant\nThe aurora borealis over the Norwegian fjord at maximum intensity \u2014 curtains of green and violet curtains visible at the base of the fjord, the light reaching the fjord surface in a glowing green glow. The fjord water is crystal clear, reflecting the aurora colors perfectly. The fjord landscape around the aurora is dark and mountainous. The scale of the light against the dark water is overwhelming. Mood: the most beautiful light phenomenon on earth, seen from the same location and time, the sky as the landscape's most complete self-contained extension.",
+      "v1_time": 2.758427858352661,
+      "v2_time": 4.306807041168213,
+      "v1_words": 104,
+      "v2_words": 103
+    },
+    {
+      "input": "robot in a garden",
+      "v1_output": "BRF: robot in a garden POS: A fantastical image of a robotic garden robot taking care of the plants, marveling at the natural world around them. The robot, made of natural materials, is perfectly aligned and moving in harmony with the plants. The sunlight filters through the canopy, casting a warm glow on the scene and casting a warm glow on the garden's organic landscape. ENH: wide-angle lens, natural light, high dynamic range INS: by Erik Johansson by Joel Santos NEG: blurry, low quality, low resolution, disfigured, bad proportions",
+      "v2_output": "user\nExpand this into a detailed image generation prompt: robot in a garden\nassistant\nA humanoid robot sits in a sun-drenched garden, its reflective visor reflecting a perfect still face of a human woman. The robot's sensor array points outward, sensors recording the garden's beauty. The garden is a riot of color \u2014 roses, wildflowers, a fountain. The robot's body is not threatening but observing. Shot at f/2, 85mm, ISO 100, available light. The image is about the quiet observation of the world through machine eyes.",
+      "v1_time": 2.2591092586517334,
+      "v2_time": 3.806729793548584,
+      "v1_words": 89,
+      "v2_words": 86
+    }
+  ]
+}

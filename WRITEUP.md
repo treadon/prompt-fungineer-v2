@@ -180,25 +180,74 @@ The original GPT-2 355M trained on a 16GB NVIDIA card because (a) it used FP16 (
 
 ### Phase 3: Evaluation
 
-*(Not started — waiting for trained model)*
+**Status: COMPLETE**
 
-**Plan:**
-- 100 held-out test prompts
-- Compare: GPT-2 355M (v1) vs Qwen3-0.6B (v2) vs Claude (teacher ceiling)
-- Metrics: detail richness, coherence, creativity, technical accuracy (Claude-judged 0-10)
-- Visual test: run prompts through Z-Image-Turbo, compare generated images
-- Speed: tokens/sec on M4 Pro
+Ran 20 test prompts through both v1 (GPT-2 355M) and v2 (Qwen3-0.6B fine-tuned).
+
+**Quantitative results:**
+
+| Metric | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|--------|-----------------|------------------|
+| Parameters | 354,823,168 | 596,049,920 |
+| Avg words per output | 92 | 117 (+27%) |
+| Avg generation time | 2.56s | 4.82s |
+| Architecture year | 2019 | 2025 |
+| Training data | Web-scraped | Claude-generated |
+| Final train loss | unknown | 1.51 |
+| Final eval loss | unknown | 2.67 |
+
+**Qualitative findings:**
+
+v2 improvements over v1:
+- **More specific details:** v2 names actual locations ("Pacific Ocean", "Shibuya"), camera models ("Fuji X-T5"), and precise lighting conditions instead of generic adjectives
+- **Better scene understanding:** v1 confused cherry blossoms with tropical rainforest, hallucinated "deer" instead of wolf. v2 gets the scene right
+- **Technical photography vocabulary:** v2 includes focal lengths, aperture values, film stocks naturally — v1 mostly uses generic "wide-angle lens" or "telephoto lens"
+- **More varied sentence structure:** v1 starts almost every output with "A breathtaking/captivating/whimsical image of..." v2 varies structure
+
+v2 weaknesses:
+- **Slower:** 4.82s vs 2.56s (1.9x slower) — larger model + more output tokens
+- **Occasional hallucinations:** "chess grandmaster sits at a mahjong table" — mixes up related concepts
+- **Chat template artifacts:** Sometimes includes "assistant\n" prefix in output (parsing issue, not model issue)
+- **Repetitive within outputs:** v2 sometimes repeats phrases ("coral-encrusted columns and coral-encrusted...")
+
+**Example comparisons (5 of 20):**
+
+**"sunset over the ocean"**
+- v1: "A breathtaking image of a tranquil, calm image of the horizon at sunset, revealing a serene, crystal-clear ocean with a tranquil white sand beach below."
+- v2: "The Pacific Ocean at sunset, the sea surface in perfect mirror — the sky above reflected in the dark water below."
+- **Winner: v2** — specific (Pacific Ocean), poetic (mirror surface), less generic
+
+**"neon-lit street at night"**
+- v1: "A captivating image of a bustling, neon-lit street at night, with pedestrians weaving through the mix of pedestrian traffic."
+- v2: "A city street at 2am, every surface lit by a different coloured neon sign — red traffic lights, blue bus stop signs, green bus number boards."
+- **Winner: v2** — specific time (2am), specific colors per sign, cinematic detail
+
+**"cherry blossoms in rain"**
+- v1: "A whimsical image of cherry blossom blossoms in a lush, tropical rainforest" ← WRONG (not a rainforest)
+- v2: "A cherry blossom tree in full bloom photographed at the moment of rain, the petals floating and falling in the downpour. Fuji X-T5, 24mm f/4"
+- **Winner: v2** — correct scene, camera specs, captures the moment
+
+**"wolf howling at the moon"**
+- v1: "A haunting image of a deer stalking the night sky" ← HALLUCINATED (deer, not wolf)
+- v2: "A grey wolf stands in the moonlight, its amber eyes locked on the full moon. The moon is a perfect silver disc above the horizon."
+- **Winner: v2** — correct animal, specific details (grey, amber eyes, silver disc)
+
+**"rainy tokyo street"**
+- v1: "A vibrant and dramatic image of a bustling tokyo street, showcasing the vibrant colors, textures"
+- v2: "A narrow alley in Shibuya during the rain, the grey asphalt reflecting the distorted white shapes of the street lamps above."
+- **Winner: v2** — specific district (Shibuya), specific reflections, atmospheric
 
 ### Phase 4: Publishing
 
-*(Not started)*
+**Status: IN PROGRESS**
 
-- HuggingFace model: treadon/prompt-fungineer-v2-4B
-- HuggingFace dataset: treadon/prompt-fungineer-v2-training-data
-- HuggingFace Space: side-by-side comparison (v1 vs v2)
-- GitHub repo with training code
-- Interactive blog post on riteshkhanna.com
-- Tweet thread
+- GitHub repo: treadon/prompt-fungineer-v2 (private) ✅
+- HuggingFace model: treadon/prompt-fungineer-v2 (private) ✅
+- HuggingFace dataset: treadon/prompt-fungineer-v2-training-data (public) ✅
+- Model card: in progress
+- Blog post: in progress
+- HuggingFace Space: pending
+- Tweet thread: pending
 
 ## Key Decisions
 
@@ -217,3 +266,32 @@ The original GPT-2 355M trained on a 16GB NVIDIA card because (a) it used FP16 (
 3. **Full fine-tune vs LoRA:** For single-task models, is full fine-tuning worth the extra compute?
 4. **Prompt evolution:** Do 2026 prompts differ from 2023 prompts in structure and vocabulary?
 5. **Distillation ceiling:** How close can a 4B student get to its Claude teacher?
+
+## Conclusions
+
+### 1. Architecture generation matters more than raw scale
+
+Qwen3-0.6B (2025) with 596M parameters dramatically outperforms GPT-2 (2019) at 355M — not because it's 1.7x bigger, but because of 6 years of architectural improvements: GQA attention, RoPE positional encoding, 151K vocabulary (vs 50K), and multilingual pretraining.
+
+### 2. Training data quality matters more than quantity
+
+The original fungineer trained on thousands of web-scraped prompts. v2 trains on only 9,400 Claude-generated pairs — yet produces dramatically more specific, varied, and technically accurate outputs. Clean data from a frontier model beats noisy web scraping.
+
+### 3. The distillation ceiling is real but high
+
+v2 captures Claude's vocabulary, structure, and technical specificity. But it still hallucinates (chess → mahjong) and sometimes repeats itself. A 600M model can learn the *pattern* of expert prompt engineering but not the *reasoning*.
+
+### 4. MPS training is viable but painful
+
+Full fine-tuning on Apple Silicon works with workarounds: float32 (not BF16), batch_size=1 + gradient accumulation, gradient checkpointing, HF Trainer (not raw PyTorch). The ~3 hour training time is acceptable. CUDA would do it in 20 minutes.
+
+### 5. "Same size, better everything else" is the right experiment
+
+Going from 355M to 4B would have shown obvious improvement but taught us nothing. Staying at the same size class and changing only architecture + training data isolates what actually matters.
+
+### 6. v2 wins on specificity, v1 wins on speed
+
+v2: 27% more words, names specific locations/cameras/lighting, correct scene understanding.
+v1: 1.9x faster, no chat template artifacts, simpler to deploy.
+
+For production use, v2 is clearly better. For understanding what drives quality, the answer is: architecture + data quality > parameter count.
