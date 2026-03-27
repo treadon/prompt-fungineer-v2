@@ -18,13 +18,42 @@ Three models, one task: expand "sunset over the ocean" into a production-ready i
 
 ### v1 vs v2: Architecture + Data Quality
 
-| Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
-|-------|-----------------|------------------|
-| "sunset over the ocean" | "A breathtaking image of a tranquil, calm image of the horizon at sunset..." | "The Pacific Ocean at sunset, the sea surface in perfect mirror — the sky above reflected in the dark water below." |
-| "cherry blossoms in rain" | "A whimsical image of cherry blossom blossoms in a lush, tropical rainforest" (wrong!) | "A cherry blossom tree in full bloom photographed at the moment of rain, the petals floating and falling in the downpour. Fuji X-T5, 24mm f/4" |
-| "wolf howling at the moon" | "A haunting image of a deer stalking the night sky" (hallucinated deer!) | "A grey wolf stands in the moonlight, its amber eyes locked on the full moon." |
+v2 generates **27% more words** on average (117 vs 92), uses specific details (cameras, locations, lighting conditions), and gets the scene right where v1 hallucinates. We generated images from all prompts using Grok Imagine to prove better prompts → better images:
 
-v2 generates **27% more words** on average (117 vs 92), uses specific details (cameras, locations, lighting conditions), and gets the scene right where v1 hallucinates.
+#### "sunset over the ocean"
+
+| Basic Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|:-----------:|:---------------:|:----------------:|
+| ![basic](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/sunset_over_the_ocean_basic.jpg) | ![v1](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/sunset_over_the_ocean_v1.jpg) | ![v2](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/sunset_over_the_ocean_v2.jpg) |
+| *"sunset over the ocean"* | *"A breathtaking image of a tranquil, calm image of the horizon at sunset..."* | *"The Pacific Ocean at sunset, the sea surface in perfect mirror..."* |
+
+#### "cherry blossoms in rain"
+
+| Basic Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|:-----------:|:---------------:|:----------------:|
+| ![basic](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/cherry_blossoms_in_rain_basic.jpg) | ![v1](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/cherry_blossoms_in_rain_v1.jpg) | ![v2](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/cherry_blossoms_in_rain_v2.jpg) |
+| *"cherry blossoms in rain"* | *"...in a lush, tropical rainforest"* (wrong!) | *"...photographed at the moment of rain, petals floating. Fuji X-T5, 24mm f/4"* |
+
+#### "wolf howling at the moon"
+
+| Basic Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|:-----------:|:---------------:|:----------------:|
+| ![basic](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/wolf_howling_at_the_moon_basic.jpg) | ![v1](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/wolf_howling_at_the_moon_v1.jpg) | ![v2](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/wolf_howling_at_the_moon_v2.jpg) |
+| *"wolf howling at the moon"* | *"A haunting image of a deer..."* (hallucinated deer!) | *"A grey wolf stands in the moonlight, amber eyes locked on the full moon"* |
+
+#### "neon-lit street at night"
+
+| Basic Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|:-----------:|:---------------:|:----------------:|
+| ![basic](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/neon-lit_street_at_night_basic.jpg) | ![v1](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/neon-lit_street_at_night_v1.jpg) | ![v2](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/neon-lit_street_at_night_v2.jpg) |
+| *"neon-lit street at night"* | *"A captivating image of a bustling, neon-lit street..."* | *"A city street at 2am, every surface lit by a different coloured neon sign..."* |
+
+#### "rainy tokyo street"
+
+| Basic Input | v1 (GPT-2 355M) | v2 (Qwen3-0.6B) |
+|:-----------:|:---------------:|:----------------:|
+| ![basic](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/rainy_tokyo_street_basic.jpg) | ![v1](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/rainy_tokyo_street_v1.jpg) | ![v2](https://raw.githubusercontent.com/treadon/prompt-fungineer-v2/main/images/rainy_tokyo_street_v2.jpg) |
+| *"rainy tokyo street"* | *"A vibrant and dramatic image of a bustling tokyo street..."* | *"A narrow alley in Shibuya during the rain, grey asphalt reflecting..."* |
 
 ### Pretrained vs From Scratch: The Pretraining Tax
 
